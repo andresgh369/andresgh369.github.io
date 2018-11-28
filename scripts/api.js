@@ -6,7 +6,7 @@
 
     var loadData = function() {
         var xhttp = new XMLHttpRequest();
-        var url = "http://andresgh369.pythonanywhere.com/perro/";
+        var url = "andresgh369.pythonanywhere.com/perro/";
 
         xhttp.onreadystatechange = function() {
             if( this.readyState == 4 && this.status == 200 ){
