@@ -2,19 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Galeria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/gallery.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/menu.css">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="images/icon.png"/>
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" media="screen and (max-width: 700px)" href="styles/celu.css">
     <link rel="stylesheet" media="screen and (max-width: 450px)" href="styles/enano.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Iniciar Sesion</title>
 </head>
-
 
  <header>
 
@@ -24,30 +23,44 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="#">Información</a></li>
             <li><a href="gallery.html">Galería</a></li>
-            <li><a href="iniciar_sesion.html">Iniciar sesion</a></li>              
+            <li><a href="iniciar_sesion.html">Iniciar sesion</a></li>     
 
 
         </ul>
     </nav>
 </header>
-        
-
-        <div><select id="dogFilter" class="dogFilter"> </div>
-        
-
-    <div id="content">
-       
-            <option href="gallery.html">Todos</option>
-            <option value="disponible">disponible</option>
-            <option value="adoptado">adoptado</option>
-            <option value="rescatado">rescatado</option>
-        </select>
-
-    <div id="dogsContainer" class="dogsContainer">
-            
 
 
-    <footer>
+<body>
+
+</div> 
+ 
+    <div id="envoltura">
+        <div id="contenedor">
+ 
+            <div id="cabecera" >
+                <img src="images/icon.png">
+            </div>
+ 
+            <div id="cuerpo">
+                <form id="form-login" action="" method="post" autocomplete="off">
+
+                    <p><label >Usuario:</label></p>
+                        <input name="usuario" type="text" id="usuario" placeholder="Ingresa Usuario" autofocus="" required=""></p>
+ 
+                    <p><label>Contraseña:</label></p>
+                        <input name="contrasenia" type="password" id="contrasenia" placeholder="Ingresa Password" required=""></p>
+ 
+                    <p id="bot"><input type="submit" id="submit" name="submit" value="Ingresar" class="boton"></p>
+                </form>
+            </div><!--fin cuerpo-->
+ 
+            <div id="pie">Sistema de Login Y Registro</div>
+        </div><!-- fin contenedor -->
+</div><!--fin envoltura-->
+
+
+<footer>
   <div id="contacto">
     <h4 class="cont" >INFORMACION DE CONTACTO</h4>
     <br/>
@@ -64,7 +77,6 @@
   
 </footer>
 
-<script src="scripts/api.js" async></script>
-<script src="scripts/app.js" async></script>
-
+    
+</body>
 </html>

@@ -1,14 +1,17 @@
-var cacheName = "misPerris-v3";
+var cacheName = "misPerris-v5";
 var filesToCache = [
     "/",
     "/index.html",
     "/gallery.html",
+    "/iniciar_sesion.html",
     "/scripts/app.js",
+    "/scripts/api.js",
     "/styles/main.css",
     "/styles/menu.css",
     "/styles/enano.css",
     "/styles/celu.css",
     "/styles/gallery.css",
+    "/styles/login.css",
     "/images/rescate1.jpeg",
     "/images/rescate2.jpg",
     "/images/rescate3.jpg",
@@ -24,6 +27,7 @@ var filesToCache = [
     "/images/boxdog8.jpg",
     "/images/boxdog9.jpg",
     "/images/boxdog10.jpg",
+    "/images/icon.png",
     "/images/atras.jpg"
 ];
 

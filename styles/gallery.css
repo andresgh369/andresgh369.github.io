@@ -1,33 +1,42 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: arial;
-}
 
-#content{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-}
 
-.content-img{
-    width: 300px;
-    margin: auto;
+
+.bearContainer {
     margin: 10px;
     padding: 10px;
-    text-align: center;
+
     margin-top: 10px;
     background: #8ABB55;
+    border-radius: 8px;
+    float: left;
+ 
 }
 
-.img{
-    width: 100%;
+.bearContainer img
+{
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
 
 }
-.content-img > label{
-    font-size: 18px;
+
+#dogsContainer
+{
+     float: left;
 }
+
+#dogFilter
+{
+    float: right;
+    background-color: #8ABB55;
+    border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+   border-radius: 8px;
+}
+
+
 
 input{
     width: 100%;
