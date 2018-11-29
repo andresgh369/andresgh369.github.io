@@ -55,5 +55,10 @@
         displayPerros( filteredPerros );
     } );
     
+	var saveData = function( key, data ) {
+		var toSave = JSON.stringify( data );
+        localStorage.setItem( key, toSave );
+    }
+	
     loadData();
 } ) ( );
