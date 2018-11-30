@@ -1,4 +1,4 @@
-$('.filtro').click(function(){
+document.getElementsByClassName('filtro').addEventListener("click", function(){
     var category = $(this).attr('categoria');
     localStorage.setItem('filtro',category);
 })
