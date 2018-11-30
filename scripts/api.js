@@ -1,5 +1,5 @@
 $(".filtro").click(function(){
-    console.log('AAAAAAAAAAAAAA');
+    localStorage.setItem('filtro',$(this).attr('categoria'));
 })
 
 (  function() {
