@@ -1,3 +1,7 @@
+$('.filtro').click(function(){
+	console.log('HAAAjkaskdanskdnaklsd');
+})
+
 (  function() {
     var app = {
         dogFilter: document.getElementById( "dogFilter" ),
