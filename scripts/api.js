@@ -1,5 +1,5 @@
-$('.filtro').click(function(){
-	console.log('HAAAjkaskdanskdnaklsd');
+$(".filtro").click(function(){
+    console.log('AAAAAAAAAAAAAA');
 })
 
 (  function() {
