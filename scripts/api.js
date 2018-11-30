@@ -1,3 +1,8 @@
+$('.filtro').click(function(){
+    var category = $(this).attr('categoria');
+    localStorage.setItem('filtro',category);
+})
+
 (  function() {
     var app = {
         dogFilter: document.getElementById( "dogFilter" ),
