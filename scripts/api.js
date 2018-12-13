@@ -75,7 +75,7 @@ function agregarprod(){
     var notasprod = notas.value;
 
     var xhr = new XMLHttpRequest();
-    var url = "http://127.0.0.1:8000/producto/";
+    var url = "https://andresgh369.pythonanywhere.com/producto/";
 
     var data = {};
     data.name = nombre;
@@ -95,7 +95,7 @@ function agregarprod(){
 }
 
 function comprar(number){
-    var url = "http://127.0.0.1:8000/producto/"+number+"/";
+    var url = "https://andresgh369.pythonanywhere.com/producto/"+number+"/";
     var xhr = new XMLHttpRequest();
 
     xhr.open("DELETE", url, true);
