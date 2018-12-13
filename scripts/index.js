@@ -58,7 +58,7 @@ function agregarlista(){
     var nombree = document.getElementById("nombrelista");
     var nombre = nombree.value;
     var xhr = new XMLHttpRequest();
-    var url = "http://127.0.0.1:8000/lista/";
+    var url = "https://andresgh369.pythonanywhere.com/lista/";
 
     var data = { "name":nombre};
     
