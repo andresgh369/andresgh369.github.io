@@ -1,106 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style/main.css" type="text/css">
-    <link rel="stylesheet" href="style/formulario.css" type="text/css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="styles/celu.css">
+    <link rel="stylesheet" media="screen and (max-width: 450px)" href="styles/enano.css">
+    <title>Mis Perris</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icon.png"/>
+     <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Mis perris">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
-<body>
-        <div id="status"></div>
-        <div>
-            <a id="name"></a>
-            <a id="last_name"></a>
-        </div>
-        
-        <button onclick="getInfo()" class="btn1" id="perfil">Perfil</button>
-        <button onclick="login()" id="login" class="btn">Iniciar Sesion</button>
-        <button onclick="fbLogoutUser()" class="btn1" id="logout">Cerrar Sesion</button>
-        
-    <nav>
-        <div>
-            <h1>Inicio</h1>
-            <nav class="menu">
-                <a class="menu-item" href="index.html">Inicio</a>
-            </nav>
-        </div>
-    </nav>
-    <script>
-            // initialize and setup facebook js sdk
-            window.fbAsyncInit = function() {
-                FB.init({
-                  appId      : '263154437701111',
-                  xfbml      : true,
-                  version    : 'v2.5'
-                });
-                FB.getLoginStatus(function(response) {
-                    if (response.status === 'connected') {
-                        document.getElementById('status').innerHTML = 'Conectado.';
-                        document.getElementById('login').style.visibility = 'hidden';
-                        document.getElementById('logout').style.visibility = 'visible';
-                        document.getElementById('perfil').style.visibility = 'visible';
-                    } else if (response.status === 'not_authorized') {
-                        document.getElementById('status').innerHTML = 'No estas conectado.'
-                        document.getElementById('logout').style.visibility = 'hidden';
-                        document.getElementById('perfil').style.visibility = 'hidden';
-                    } else {
-                        document.getElementById('status').innerHTML = 'Inicia sesion con facebook.';
-                        document.getElementById('logout').style.visibility = 'hidden';
-                        document.getElementById('perfil').style.visibility = 'hidden';
-                    }
-                });
-            };
-            (function(d, s, id){
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {return;}
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-            
-            // login with facebook with extra permissions
-            function login() {
-                FB.login(function(response) {
-                    if (response.status === 'connected') {
-                        document.getElementById('status').innerHTML = 'Conectado.';
-                        document.getElementById('name').innerHTML = "<a>'" + response.first_name + "'</a>";
-                        document.getElementById('last_name').innerHTML = "<a>'" + response.last_name + "'</a>";
-                        document.getElementById('login').style.visibility = 'hidden';
-                        document.getElementById('logout').style.visibility = 'visible';
-                        document.getElementById('perfil').style.visibility = 'visible';
-                    } else if (response.status === 'not_authorized') {
-                        document.getElementById('status').innerHTML = 'No estas conectado.'
-                        document.getElementById('perfil').style.visibility = 'hidden';
-                    } else {
-                        document.getElementById('status').innerHTML = 'Inicia sesion con facebook.';
-                        document.getElementById('perfil').style.visibility = 'hidden';
-                    }
-                }, {scope: 'email'});
-            }
-            function fbLogoutUser() {
-                FB.getLoginStatus(function(response) {
-                    if (response && response.status === 'connected') {
 
-                FB.logout(function(response) {
-                    document.location.reload();
-                });
-                } else if (response.status === 'not_authorized') 
-                {
-                FB.logout(function(response) {
-                    document.location.reload();
-                });
-            }
-});}
-            // getting basic user info
-            function getInfo() {
-                FB.api('/me', 'GET', {fields: 'first_name,last_name,name,picture.width(150).height(150)'}, function(response) {
-                    document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
-                    document.getElementById('name').innerHTML = "<a>'" + response.first_name + "'</a>";
-                    document.getElementById('last_name').innerHTML = "<a>'" + response.last_name + "'</a>";
-                });
-            }
-        </script>
-</body>
+ <header>
+       <h1 id="head">Carrito de compras</h1>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Mis listas</a></li>
+            <li><a href="gallery.html">Cotizar</a></li>
+            <li><a href="iniciar_sesion.html">Iniciar sesion</a></li>     
+
+
+        </ul>
+    </nav>
+</header>
+
+<div class="listacontainer">
+    <div class="titcont"><h1>Mis listas    </h1></div>
+    <div class="titcont"> 
+        <center>
+        <p><label for="listass">Nombre lista</label></p>
+            <input name="listass" type="Text" id="nombrelista" placeholder="Nombre" required="">
+        </center>    
+    </div>
+    <div id="listascont">
+
+    </div>
+    <center>
+            <div class="titcont"><a>
+                    <p id="bot"><input onclick="agregarlista()" type="submit" id="submit" name="submit" value="Agregar lista" class="boton"></p>
+                </a></div>
+    </center>
+</div>
+
+
+<footer>
+  <div id="contacto">
+    <h4 class="cont" >INFORMACION DE CONTACTO</h4>
+    <br/>
+    <h5 class="cont" >TELÉFONO</h5>
+    <p class="cont" > <a href="tel:+56993545627">
+                +569 93 5456 27 </a> </p>
+    <br/>
+    <h5 class="cont" >CORREO ELECTRÓNICO</h5>
+    <p class="cont" ><a>
+                </a>Pide agregar una nueva tienda enviando un correo a esta direccion</p>
+    <p class="cont" ><a href="mailto:listascompras@develops.cl">
+                    listascompras@develops.cl</a> </p>
+    <p class="p" >@ Todos los derechos reservados</p>
+  </div>
+  <br>
+  
+</footer>
+  <script src="scripts/jQuery.js" async></script>
+  <script src="scripts/app.js" async></script>
+  <script src="scripts/index.js" async></script>
+
 </html>
