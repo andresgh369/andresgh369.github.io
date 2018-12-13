@@ -19,11 +19,11 @@ body{
         position:absolute;
     /*left y top al 50% para que quede centrado en la pantalla*/
     left:50%;
-    top:50%;
+    top:30%;
     margin-left:-165px;
-    margin-top: 30px;
-    margin-bottom: 300px;
-    width: 330px;
+    margin-top: 10px;
+    margin-bottom: 200px;
+    width: 300px;
  
 }
  
@@ -38,6 +38,12 @@ body{
     -webkit-border-radius:5px;
     -moz-border-radius:10px;
     border-radius:10px;
+ 
+}
+
+img{
+display:block;
+margin:auto;
 }
  
 #cabecera{
@@ -45,7 +51,7 @@ body{
     border-bottom: 5px solid #333;
     padding-top: 5px;
     /*color:#FFF;*/
-    height:70px;
+    height:30px;
     line-height:50px;
     text-align:center;
 }
@@ -138,4 +144,28 @@ footer {
   width: 100%;
   margin-top: 1000px;
 
+}
+
+
+
+#facebook{
+
+
+     background-color: #8ABB55;
+    /*background-color:#356AA0;*/
+    /*box-shadow: 0 0 0 9px rgba(128,0,0,.1);*/
+    /*Margen de sombra alrededor del contenedor 8px negro*/
+    box-shadow: 3px 3px 10px 5px rgba(0,0,0,.8);
+    /*Las 3 líneas siguientes, sirven para el borde redondeado
+     * pero para diferentes navegadores*/
+    -webkit-border-radius:5px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    padding: 15px;
+    position:absolute;
+    /*left y top al 50% para que quede centrado en la pantalla*/
+    left:50%;
+    top:50%;
+    margin-left:-165px;
+    margin-top: 400px;
 }
